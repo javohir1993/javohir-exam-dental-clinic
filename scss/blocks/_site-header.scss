@@ -113,19 +113,19 @@
   &--vk {
     width: 28px;
     height: 28px;
-    background-image: url("../img/vk-icon.svg");
+    background-image: url("../img/vk-icon.png");
   }
 
   &--instagram {
     width: 16px;
     height: 16px;
-    background-image: url("../img/instagram-icon.svg");
+    background-image: url("../img/instagram-icon.png");
   }
 
   &--twitter {
     width: 18px;
     height: 18px;
-    background-image: url("../img/twitter-icon.svg");
+    background-image: url("../img/twitter-icon.png");
   }
 
   &:hover {
@@ -134,5 +134,22 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+
+@include retina-bg {
+  .site-header__social-link {
+    &--vk {
+      background-image: url("../img/vk-icon@2x.png");
+    }
+
+    &--instagram {
+      background-image: url("../img/instagram-icon@2x.png");
+    }
+
+    &--twitter {
+      background-image: url("../img/twitter-icon@2x.png");
+    }
   }
 }

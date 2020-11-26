@@ -8,7 +8,7 @@
     width: 29px;
     height: 29px;
     margin-right: 7px;
-    background-image: url("../img/clock-icon.svg");
+    background-image: url("../img/clock-icon.png");
     background-repeat: no-repeat;
     background-size: 29px 29px;
     background-position: center center;
@@ -31,4 +31,13 @@
   margin: 0;
   font-weight: 300;
   color: $color-heading;
+}
+
+
+@include retina-bg {
+  .work-hours {
+    &::before {
+      background-image: url("../img/clock-icon@2x.png");
+    }
+  }
 }

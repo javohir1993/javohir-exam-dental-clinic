@@ -13,7 +13,7 @@
     width: 29px;
     height: 29px;
     margin-right: 7px;
-    background-image: url("../img/phone-icon.svg");
+    background-image: url("../img/phone-icon.png");
     background-repeat: no-repeat;
     background-size: 29px 29px;
     background-position: center center;
@@ -35,4 +35,13 @@
 
 .call-link__text {
   font-weight: 500;
+}
+
+
+@include retina-bg {
+  .call-link {
+    &::before {
+      background-image: url("../img/phone-icon@2x.png");
+    }
+  }
 }
