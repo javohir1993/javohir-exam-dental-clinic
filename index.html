@@ -8,6 +8,8 @@
 </head>
 <body class="body-nojs">
 
+  <h1 class="visually-hidden">Dental Practice web site</h1>
+
   <!-- HEADER -->
 
   <header class="site-header site-header--nojs">
@@ -63,20 +65,60 @@
 
         <ul class="site-header__socials">
           <li class="site-header__social">
-            <a class="site-header__social-link site-header__social-link--vk" href="https://vk.com" target="_blank" aria-label="VKontakte"></a>
+            <a class="site-header__social-link site-header__social-link--vk" href="https://vk.com" target="_blank" aria-label="VKontakte link"></a>
           </li>
           <li class="site-header__social">
-            <a class="site-header__social-link site-header__social-link--instagram" href="https://instagram.com" target="_blank" aria-label="Instagram"></a>
+            <a class="site-header__social-link site-header__social-link--instagram" href="https://instagram.com" target="_blank" aria-label="Instagram link"></a>
           </li>
           <li class="site-header__social">
-            <a class="site-header__social-link site-header__social-link--twitter" href="https://twitter.com" target="_blank" aria-label="Twitter"></a>
+            <a class="site-header__social-link site-header__social-link--twitter" href="https://twitter.com" target="_blank" aria-label="Twitter link"></a>
           </li>
         </ul>
       </div><!-- site-header__collapse -->
     </div><!-- site-header__main -->
   </header><!-- site-header -->
 
-  <h1 class="visually-hidden">Dental Practice</h1>
+  <!-- MAIN -->
+
+  <main class="main-content">
+
+    <!-- INTRO -->
+
+    <div class="intro">
+
+      <h2 class="visually-hidden">Site Intro carusel</h2>
+
+      <ul class="intro__list">
+        <li class="intro__item">
+          <picture>
+            <source media="(max-width:750px)" type="image/webp" srcset="img/intro-bg-mobile.webp 1x, img/intro-bg-mobile@2x.webp 2x">
+            <source media="(max-width:750px)" type="image/png" srcset="img/intro-bg-mobile.png 1x, img/intro-bg-mobile@2x.png 2x">
+
+            <source media="(max-width:1050px)" type="image/webp" srcset="img/intro-bg-tablet.webp 1x, img/intro-bg-tablet@2x.webp 2x">
+            <source media="(max-width:1050px)" type="image/png" srcset="img/intro-bg-tablet.png 1x, img/intro-bg-tablet@2x.png 2x">
+
+            <source type="image/webp" srcset="img/intro-bg-desktop.webp 1x, img/intro-bg-desktop@2x.webp 2x">
+            <img class="intro__img" src="img/intro-bg-desktop.png" alt="Carusel background image" width="1920" height="900" aria-hidden="true" srcset="img/intro-bg-desktop.png 1x, img/intro-bg-desktop.png@2x 2x">
+          </picture>
+
+          <div class="container intro__container">
+            <div class="intro__info">
+              <h3 class="intro__info-heading">Modern technology and expert-class dentists</h3>
+              <p class="intro__info-text">get a brilliant smile for every day</p>
+              <a class="button button--primary intro__get-link" href="#">GET</a>
+            </div>
+
+            <div class="intro__buttons-wrapper">
+              <button class="intro__button intro__button--pre" type="button" aria-label="Carusel's button previous"></button>
+              <button class="intro__button intro__button--next" type="button" aria-label="Carusel's button next"></button>
+            </div>
+          </div><!-- container -->
+        </li>
+      </ul>
+    </div><!-- intro -->
+
+  </main>
+
 
 
   <script>
