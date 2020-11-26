@@ -23,7 +23,23 @@ body {
   color: $color-text;
 }
 
+.body-nojs {
+  margin-top: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+@include breakpoint-down (1180) {
+  body {
+    margin-top: 156px;
+  }
+}
+
+@include breakpoint-down (1050) {
+  body {
+    margin-top: 68px;
+  }
 }

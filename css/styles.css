@@ -405,9 +405,25 @@ body {
   color: #4D4D4D;
 }
 
+.body-nojs {
+  margin-top: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+@media only screen and (max-width: 1180px) {
+  body {
+    margin-top: 156px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  body {
+    margin-top: 68px;
+  }
 }
 
 .visually-hidden {
@@ -438,6 +454,11 @@ img {
   background-color: #fff;
 }
 
+.site-header--nojs {
+  position: static;
+  margin-bottom: 20px;
+}
+
 .site-header__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -450,6 +471,10 @@ img {
           align-items: center;
   padding-top: 12px;
   padding-bottom: 56px;
+}
+
+.site-header--nojs .site-header__top {
+  padding-bottom: 12px;
 }
 
 .site-header__top-logo:hover {
@@ -481,13 +506,34 @@ img {
   max-width: 1140px;
   width: 100%;
   top: 84px;
-  left: calc(0);
+  left: calc(50% - 570px);
   padding: 20px 33px 20px 30px;
   border-radius: 5px;
   background-color: #0055B8;
 }
 
+.site-header--nojs .site-header__main {
+  position: static;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .site-header__main-logo {
+  display: none;
+  margin-right: 105px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.site-header__main-logo:hover {
+  opacity: 0.8;
+}
+
+.site-header__main-logo:active {
+  opacity: 0.6;
+}
+
+.site-header--nojs .site-header__main-logo {
   display: none;
 }
 
@@ -495,6 +541,44 @@ img {
   display: block;
   width: 140px;
   height: 16px;
+}
+
+.site-header__button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: none;
+  position: relative;
+  z-index: 51;
+  width: 25px;
+  height: 21px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/gamburger-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.site-header__button::after {
+  position: absolute;
+  z-index: 51;
+  display: block;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.site-header__main--open .site-header__button {
+  background-image: url("../img/close-icon.svg");
+}
+
+.site-header--nojs .site-header__button {
+  display: none;
 }
 
 .site-header__collapse {
@@ -512,6 +596,28 @@ img {
           flex-grow: 1;
 }
 
+.site-header__main--open .site-header__collapse {
+  position: absolute;
+  z-index: 51;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 100%;
+  left: 0;
+  padding-bottom: 26px;
+  text-align: center;
+  background-color: #0055B8;
+}
+
+.site-header__main--open .site-header__sitenav {
+  width: 100%;
+}
+
 .site-header__list {
   padding: 0;
   margin: 0;
@@ -524,8 +630,26 @@ img {
           align-items: center;
 }
 
+.site-header__main--open .site-header__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 63px;
+}
+
 .site-header__item:not(:last-child) {
   margin-right: 35px;
+}
+
+.site-header__main--open .site-header__item {
+  width: 100%;
+  border: 1px solid #FFD600;
+}
+
+.site-header__main--open .site-header__item:not(:last-child) {
+  border-bottom: none;
+  margin-right: 0;
 }
 
 .site-header__item-link {
@@ -544,6 +668,20 @@ img {
 
 .site-header__item-link:active {
   opacity: 0.6;
+}
+
+.site-header__main--open .site-header__item-link {
+  display: block;
+  padding-top: 23px;
+  padding-bottom: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #FFD600;
+}
+
+.site-header__main--open .site-header__item-link:active {
+  background-color: #FFD600;
+  color: #0055B8;
 }
 
 .site-header__socials {
@@ -593,6 +731,113 @@ img {
 
 .site-header__social-link:active {
   opacity: 0.6;
+}
+
+@media only screen and (max-width: 1180px) {
+  .site-header__top {
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+  .site-header__main {
+    position: fixed;
+    left: 0;
+    max-width: 100%;
+    border-radius: 0;
+  }
+  .site-header__main-logo {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .site-header__top {
+    display: none;
+  }
+  .site-header--nojs .site-header__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .site-header__main {
+    position: static;
+    padding-right: 30px;
+    padding-left: 22px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .site-header__main {
+    padding: 24px 20px;
+  }
+  .site-header__main-logo {
+    margin-right: 10px;
+  }
+  .site-header__button {
+    display: block;
+  }
+  .site-header__collapse {
+    display: none;
+  }
+  .site-header--nojs .site-header__collapse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .site-header--nojs .site-header__sitenav {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .site-header--nojs .site-header__top {
+    display: none;
+  }
+  .site-header--nojs .site-header__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .site-header--nojs .site-header__main-logo {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .site-header--nojs .site-header__collapse {
+    width: 100%;
+  }
+  .site-header--nojs .site-header__sitenav {
+    width: 100%;
+  }
+  .site-header--nojs .site-header__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .site-header--nojs .site-header__item {
+    width: 100%;
+    border: 1px solid #FFD600;
+  }
+  .site-header--nojs .site-header__item:not(:last-child) {
+    border-bottom: none;
+    margin-right: 0;
+  }
+  .site-header--nojs .site-header__item-link {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #FFD600;
+  }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {

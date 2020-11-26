@@ -6,12 +6,12 @@
   <title>Dental Clinic Web Site</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="body-nojs">
 
   <!-- HEADER -->
 
-  <header class="site-header">
-    <div class="container">
+  <header class="site-header site-header--nojs">
+    <div class="container site-header__container">
       <div class="site-header__top">
         <a class="call-link" href="tel:+73422162227">
           <div class="call-link__info">
@@ -31,53 +31,71 @@
           </div>
         </div>
       </div><!-- site-header__top -->
+    </div><!-- container -->
 
-      <div class="site-header__main">
-        <a class="site-header__main-logo" href="index.html">
-          <img class="site-header__main-img" src="img/site-logo-main.svg" alt="Dental Practice Web site logo" width="140" height="16">
-        </a>
+    <div class="site-header__main">
+      <a class="site-header__main-logo" href="index.html">
+        <img class="site-header__main-img" src="img/site-logo-main.svg" alt="Dental Practice Web site logo" width="140" height="16">
+      </a>
 
-        <div class="site-header__collapse">
-          <nav class="site-header__sitenav">
-            <ul class="site-header__list">
-              <li class="site-header__item">
-                <a class="site-header__item-link" href="services.html">Services</a>
-              </li>
-              <li class="site-header__item">
-                <a class="site-header__item-link" href="advantages.html">Advantages</a>
-              </li>
-              <li class="site-header__item">
-                <a class="site-header__item-link" href="team.html">Team</a>
-              </li>
-              <li class="site-header__item">
-                <a class="site-header__item-link" href="reviews.html">Reviews</a>
-              </li>
-              <li class="site-header__item">
-                <a class="site-header__item-link" href="contacts.html">Contacts</a>
-              </li>
-            </ul>
-          </nav>
+      <button class="site-header__button" type="button" aria-label="Sitenav toggler"></button>
 
-          <ul class="site-header__socials">
-            <li class="site-header__social">
-              <a class="site-header__social-link site-header__social-link--vk" href="https://vk.com" target="_blank" aria-label="VKontakte"></a>
+      <div class="site-header__collapse">
+        <nav class="site-header__sitenav">
+          <ul class="site-header__list">
+            <li class="site-header__item">
+              <a class="site-header__item-link" href="services.html">Services</a>
             </li>
-            <li class="site-header__social">
-              <a class="site-header__social-link site-header__social-link--instagram" href="https://instagram.com" target="_blank" aria-label="Instagram"></a>
+            <li class="site-header__item">
+              <a class="site-header__item-link" href="advantages.html">Advantages</a>
             </li>
-            <li class="site-header__social">
-              <a class="site-header__social-link site-header__social-link--twitter" href="https://twitter.com" target="_blank" aria-label="Twitter"></a>
+            <li class="site-header__item">
+              <a class="site-header__item-link" href="team.html">Team</a>
+            </li>
+            <li class="site-header__item">
+              <a class="site-header__item-link" href="reviews.html">Reviews</a>
+            </li>
+            <li class="site-header__item">
+              <a class="site-header__item-link" href="contacts.html">Contacts</a>
             </li>
           </ul>
-        </div><!-- site-header__collapse -->
-      </div><!-- site-header__main -->
+        </nav>
 
-    </div><!-- container -->
+        <ul class="site-header__socials">
+          <li class="site-header__social">
+            <a class="site-header__social-link site-header__social-link--vk" href="https://vk.com" target="_blank" aria-label="VKontakte"></a>
+          </li>
+          <li class="site-header__social">
+            <a class="site-header__social-link site-header__social-link--instagram" href="https://instagram.com" target="_blank" aria-label="Instagram"></a>
+          </li>
+          <li class="site-header__social">
+            <a class="site-header__social-link site-header__social-link--twitter" href="https://twitter.com" target="_blank" aria-label="Twitter"></a>
+          </li>
+        </ul>
+      </div><!-- site-header__collapse -->
+    </div><!-- site-header__main -->
   </header><!-- site-header -->
 
-
-
   <h1 class="visually-hidden">Dental Practice</h1>
+
+
+  <script>
+
+    var elBodyNojs = document.querySelector('body')
+    var elSiteHeader = document.querySelector('.site-header')
+    var elSiteHeaderMain = document.querySelector('.site-header__main');
+    var elButton = document.querySelector('.site-header__button');
+
+    elBodyNojs.classList.remove('body-nojs')
+    elSiteHeader.classList.remove('site-header--nojs')
+
+    elButton.addEventListener('click', function () {
+      elSiteHeaderMain.classList.toggle('site-header__main--open');
+    });
+
+
+
+  </script>
 
 </body>
 </html>
