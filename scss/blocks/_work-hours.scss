@@ -1,0 +1,34 @@
+.work-hours {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    flex-shrink: 0;
+    content: "";
+    width: 29px;
+    height: 29px;
+    margin-right: 7px;
+    background-image: url("../img/clock-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 29px 29px;
+    background-position: center center;
+  }
+}
+
+.work-hours__info {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.work-hours__info-top {
+  margin: 0;
+  margin-bottom: 3px;
+  font-weight: 500;
+  color: #00B007;
+}
+
+.work-hours__info-bottom {
+  margin: 0;
+  font-weight: 300;
+  color: $color-heading;
+}

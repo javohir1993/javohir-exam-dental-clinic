@@ -1,0 +1,38 @@
+.call-link {
+  display: flex;
+  align-items: center;
+  max-width: 147px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-heading;
+  text-decoration: none;
+
+  &::before {
+    flex-shrink: 0;
+    content: "";
+    width: 29px;
+    height: 29px;
+    margin-right: 7px;
+    background-image: url("../img/phone-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 29px 29px;
+    background-position: center center;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.call-link__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.call-link__text {
+  font-weight: 500;
+}

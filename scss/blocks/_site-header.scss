@@ -1,0 +1,138 @@
+.site-header {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.site-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 56px;
+}
+
+.site-header__top-logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.site-header__top-img {
+  display: block;
+  width: 103px;
+  height: 56px;
+}
+
+.site-header__main {
+  position: absolute;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  width: 100%;
+  top: 84px;
+  left: calc(0);
+  padding: 20px 33px 20px 30px;
+  border-radius: 5px;
+  background-color: $bg-blue;
+}
+
+.site-header__main-logo {
+  display: none;
+}
+
+.site-header__main-img {
+  display: block;
+  width: 140px;
+  height: 16px;
+}
+
+.site-header__collapse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.site-header__list {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+}
+
+.site-header__item {
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+.site-header__item-link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $bg-yellow;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.site-header__socials {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+}
+
+.site-header__social {
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+
+.site-header__social-link {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+
+  &--vk {
+    width: 28px;
+    height: 28px;
+    background-image: url("../img/vk-icon.svg");
+  }
+
+  &--instagram {
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/instagram-icon.svg");
+  }
+
+  &--twitter {
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/twitter-icon.svg");
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
