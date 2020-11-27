@@ -1412,4 +1412,285 @@ img {
     margin-bottom: 17px;
   }
 }
+
+.services {
+  padding-bottom: 70px;
+}
+
+.services__heading {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #272727;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  margin-bottom: 13px;
+}
+
+.services__heading::before {
+  content: "";
+  width: 50px;
+  height: 3px;
+  margin-bottom: 16px;
+  background-color: #FFD600;
+}
+
+.services__heading::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: ":D :P";
+  width: 275px;
+  height: 152px;
+  top: 0;
+  font-weight: bold;
+  font-size: 130px;
+  line-height: 152px;
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.services__text {
+  margin: 0;
+  margin-bottom: 44px;
+  text-align: center;
+}
+
+.services__list-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.services__button {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 42px;
+  height: 49px;
+  padding: 0;
+  border: 2px solid #1D6ECB;
+  border-radius: 5px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 15px 21px;
+  background-position: center center;
+  cursor: pointer;
+  outline: none;
+}
+
+.services__button:active {
+  opacity: 0.6;
+}
+
+.services__button:focus {
+  border: none;
+  outline: 2px dashed #1D6ECB;
+}
+
+.services__button--pre {
+  background-image: url("../img/arrow-right-blue.svg");
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+          transform: translateY(-50%) rotate(-180deg);
+  left: 0;
+}
+
+.services__button--pre:hover {
+  -webkit-filter: drop-shadow(0px -4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px -4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.services__button--next {
+  background-image: url("../img/arrow-right-blue.svg");
+  right: 0;
+}
+
+.services__button--next:hover {
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.services__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 68px;
+  padding-left: 68px;
+}
+
+.services__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 200px;
+  padding: 30px 50px 24px 50px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.services__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.services__item::before {
+  content: "";
+  width: 77px;
+  height: 66px;
+  margin-bottom: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.services__item--dental::before {
+  background-size: 69px 68px;
+  background-image: url("../img/dental-bg.png");
+}
+
+.services__item--hygiene::before {
+  background-size: 77px 66px;
+  background-image: url("../img/hygiene-bg.png");
+}
+
+.services__item--diagnostics::before {
+  background-size: 66px 66px;
+  background-image: url("../img/diagnostics-bg.png");
+}
+
+.services__item--childrens::before {
+  background-size: 73px 62px;
+  background-image: url("../img/childrens-bg.png");
+}
+
+.services__item--last {
+  padding-right: 30px;
+}
+
+.services__item--last::before {
+  display: none;
+}
+
+.services__item-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 95px;
+  margin: 0;
+  margin-bottom: 13px;
+  font-weight: normal;
+  line-height: 21px;
+}
+
+.services__item-heading::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  margin-top: 12px;
+  background-color: #0A60C3;
+}
+
+.services__item-delprice {
+  margin: 0;
+  margin-bottom: 3px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.services__item-newprice {
+  margin: 0;
+  font-weight: 500;
+  line-height: 21px;
+  color: #0A60C3;
+}
+
+@media only screen and (max-width: 1200px) {
+  .services__list {
+    padding-right: 107px;
+    padding-left: 107px;
+  }
+  .services__item:nth-child(4) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .services__list {
+    padding-right: 130px;
+    padding-left: 130px;
+  }
+  .services__item:nth-child(3) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .services__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .services__item:nth-child(2) {
+    display: none;
+  }
+  .services__button {
+    display: none;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .services__item--dental::before {
+    background-image: url("../img/dental-bg@2x.png");
+  }
+  .services__item--hygiene::before {
+    background-image: url("../img/hygiene-bg@2x.png");
+  }
+  .services__item--diagnostics::before {
+    background-image: url("../img/diagnostics-bg@2x.png");
+  }
+  .services__item--childrens::before {
+    background-image: url("../img/childrens-bg@2x.png");
+  }
+}
 /*# sourceMappingURL=styles.css.map */

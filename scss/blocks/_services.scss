@@ -1,0 +1,233 @@
+.services {
+  padding-bottom: 70px;
+}
+
+.services__heading {
+  @include heading-style;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 13px;
+
+  &::before {
+    @include yellow-line;
+  }
+
+  &::after {
+    @include heading-bg;
+  }
+}
+
+.services__text {
+  margin: 0;
+  margin-bottom: 44px;
+  text-align: center;
+}
+
+.services__list-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.services__button {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 49px;
+  padding: 0;
+  border: 2px solid #1D6ECB;
+  border-radius: 5px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 15px 21px;
+  background-position: center center;
+  cursor: pointer;
+  outline: none;
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    border: none;
+    outline: 2px dashed #1D6ECB;
+  }
+
+  &--pre {
+    background-image: url("../img/arrow-right-blue.svg");
+    transform: translateY(-50%) rotate(-180deg);
+    left: 0;
+
+    &:hover {
+      filter: drop-shadow(0px -4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  &--next {
+    background-image: url("../img/arrow-right-blue.svg");
+    right: 0;
+
+    &:hover {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+}
+
+.services__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 68px;
+  padding-left: 68px;
+}
+
+.services__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+  padding: 30px 50px 24px 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &::before {
+    content: "";
+    width: 77px;
+    height: 66px;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--dental::before {
+    background-size: 69px 68px;
+    background-image: url("../img/dental-bg.png");
+  }
+
+  &--hygiene::before {
+    background-size: 77px 66px;
+    background-image: url("../img/hygiene-bg.png");
+  }
+
+  &--diagnostics::before {
+    background-size: 66px 66px;
+    background-image: url("../img/diagnostics-bg.png");
+  }
+
+  &--childrens::before {
+    background-size: 73px 62px;
+    background-image: url("../img/childrens-bg.png");
+  }
+
+  &--last {
+    padding-right: 30px;
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.services__item-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 95px;
+  margin: 0;
+  margin-bottom: 13px;
+  font-weight: normal;
+  line-height: 21px;
+
+
+  &::after {
+    content: "";
+    width: 25px;
+    height: 2px;
+    margin-top: 12px;
+    background-color: #0A60C3;
+  }
+}
+
+.services__item-delprice {
+  margin: 0;
+  margin-bottom: 3px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration-line: line-through;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.services__item-newprice {
+  margin: 0;
+  font-weight: 500;
+  line-height: 21px;
+  color: #0A60C3;
+}
+
+@include breakpoint-down (1200) {
+  .services__list {
+    padding-right: 107px;
+    padding-left: 107px;
+  }
+
+  .services__item:nth-child(4) {
+    display: none;
+  }
+}
+
+@include breakpoint-down (1000) {
+  .services__list {
+    padding-right: 130px;
+    padding-left: 130px;
+  }
+
+  .services__item:nth-child(3) {
+    display: none;
+  }
+}
+
+@include breakpoint-down (850) {
+  .services__list {
+    justify-content: center;
+  }
+
+  .services__item:nth-child(2) {
+    display: none;
+  }
+
+  .services__button {
+    display: none;
+  }
+}
+
+@include retina-bg {
+  .services__item {
+    &--dental::before {
+      background-image: url("../img/dental-bg@2x.png");
+    }
+
+    &--hygiene::before {
+      background-image: url("../img/hygiene-bg@2x.png");
+    }
+
+    &--diagnostics::before {
+      background-image: url("../img/diagnostics-bg@2x.png");
+    }
+
+    &--childrens::before {
+      background-image: url("../img/childrens-bg@2x.png");
+    }
+  }
+}

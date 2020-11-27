@@ -43,8 +43,24 @@
   color: $color-heading;
 }
 
+@mixin  heading-bg {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: ":D :P";
+  width: 275px;
+  height: 152px;
+  top: 0;
+  font-weight: bold;
+  font-size: 130px;
+  line-height: 152px;
+  color: rgba(0, 0, 0, 0.05);
+}
+
 @mixin yellow-line {
+  content: "";
   width: 50px;
   height: 3px;
+  margin-bottom: 16px;
   background-color: $bg-yellow;
 }
