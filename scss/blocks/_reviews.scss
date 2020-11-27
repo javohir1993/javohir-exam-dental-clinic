@@ -1,0 +1,215 @@
+.reviews {
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+.reviews__heading {
+  @include heading-style;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 12px;
+
+  &::before {
+    @include yellow-line;
+  }
+
+  &::after {
+    @include heading-bg;
+  }
+}
+
+.reviews__heading-mobile {
+  @include heading-style;
+  position: relative;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 12px;
+  text-align: center;
+
+  &::before {
+    @include yellow-line;
+  }
+
+  &::after {
+    @include heading-bg;
+  }
+}
+
+.reviews__text {
+  max-width: 465px;
+  margin: 0;
+  margin-bottom: 35px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.reviews__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 37px;
+  text-align: left;
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 365px;
+
+  &::before {
+    content: "";
+    width: 354px;
+    height: 240px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-size: 354px 240px;
+    background-position: left top;
+  }
+
+  &--ivanov::before {
+    background-image: url("../img/ivanov-img.jpg");
+  }
+
+  &--vasilisa::before {
+    background-image: url("../img/petr-img.jpg");
+  }
+
+  &--petr::before {
+    background-image: url("../img/petr-img.jpg");
+  }
+}
+
+.reviews__item-heading {
+  margin: 0;
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.reviews__item-quote {
+  margin: 0;
+}
+
+.reviews__button {
+  padding-right: 76px;
+  padding-left: 76px;
+  border: 2px solid $bg-blue;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: $color-text;
+  text-align: center;
+
+  &:hover {
+    background-color: $bg-blue;
+    color: #fff;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@include breakpoint-down (1150) {
+  .reviews__item {
+    max-width: 306px;
+
+    &::before {
+      width: 305px;
+    }
+  }
+}
+
+@include breakpoint-down (1000) {
+  .reviews__list {
+    justify-content: center;
+  }
+
+  .reviews__item {
+    max-width: 365px;
+
+    &::before {
+      width: 354px;
+    }
+
+    &--ivanov {
+      margin-right: 20px;
+    }
+
+    &--petr {
+      display: none;
+    }
+  }
+}
+
+@include breakpoint-down (800) {
+  .reviews__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviews__item {
+    max-width: 307px;
+
+    &::before {
+      width: 307px;
+    }
+
+    &--ivanov {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@include breakpoint-down (550) {
+  .reviews__heading {
+    display: none;
+  }
+
+  .reviews__heading-mobile {
+    display: flex;
+  }
+
+  .reviews__list {
+    margin-bottom: 50px;
+  }
+
+  .reviews__item {
+
+    &--ivanov {
+      margin-bottom: 0;
+    }
+
+    &--vasilisa {
+      display: none;
+    }
+  }
+}
+
+@include retina-bg {
+  .reviews__item {
+    &--ivanov::before {
+      background-image: url("../img/ivanov-img@2x.png");
+    }
+
+    &--vasilisa::before {
+      background-image: url("../img/petr-img@2x.png");
+    }
+
+    &--petr::before {
+      background-image: url("../img/petr-img@2x.png");
+    }
+  }
+}
