@@ -1,0 +1,142 @@
+.team {
+  padding-bottom: 70px;
+  overflow-x: hidden;
+}
+
+.team__heading {
+  @include heading-style;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 13px;
+
+  &::before {
+    @include yellow-line;
+  }
+
+  &::after {
+    @include heading-bg;
+  }
+}
+
+.team__text {
+  margin: 0;
+  margin-bottom: 21px;
+  text-align: center;
+}
+
+.team__list-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.team__button {
+  margin-top: -30px;
+}
+
+.team__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 68px;
+  padding-left: 68px;
+}
+
+.team__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+
+  &:not(:last-child) {
+    margin-right: 52px;
+  }
+
+  &::before {
+    content: "";
+    width: 300px;
+    height: 350px;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+    background-size: 300px 350px;
+    background-position: center center;
+    object-fit: cover;
+  }
+
+  &--anna::before {
+    background-image: url("../img/anna-img.jpg");
+  }
+
+  &--ivan::before {
+    background-image: url("../img/ivan-img.jpg");
+  }
+
+  &--larisa::before {
+    background-image: url("../img/larisa-img.jpg");
+  }
+}
+
+.team__item-heading {
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.team__item-text {
+  margin: 0;
+  line-height: 21px;
+  color: #000000;
+}
+
+@include breakpoint-down (1200) {
+  .team__item {
+    &:not(:last-child) {
+      margin-right: 44px;
+    }
+
+    &::before {
+      width: 253px;
+    }
+  }
+}
+
+@include breakpoint-down (1000) {
+  .team__list {
+    padding: 0;
+  }
+
+  .team__button {
+    display: none;
+  }
+}
+
+@include breakpoint-down (600) {
+  .team__text {
+    margin-bottom: 6px;
+  }
+
+  .team__text-br {
+    display: none;
+  }
+}
+
+@include retina-bg {
+  .team__item {
+    &--anna::before {
+      background-image: url("../img/anna-img@2x.png");
+    }
+
+    &--ivan::before {
+      background-image: url("../img/ivan-img@2x.png");
+    }
+
+    &--larisa::before {
+      background-image: url("../img/larisa-img@2x.png");
+    }
+  }
+}
