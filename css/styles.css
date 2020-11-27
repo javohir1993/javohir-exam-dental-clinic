@@ -1864,4 +1864,128 @@ img {
     background-image: url("../img/larisa-img@2x.png");
   }
 }
+
+.contact__container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact__heading {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #272727;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.contact__heading::before {
+  content: "";
+  width: 50px;
+  height: 3px;
+  margin-bottom: 16px;
+  background-color: #FFD600;
+}
+
+.contact__heading::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: ":D :P";
+  width: 275px;
+  height: 152px;
+  top: 0;
+  font-weight: bold;
+  font-size: 130px;
+  line-height: 152px;
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.contact__text {
+  margin: 0;
+  margin-bottom: 27px;
+  text-align: center;
+}
+
+.contact__form {
+  position: absolute;
+  z-index: 1;
+  top: 300px;
+  left: 20px;
+}
+
+.contact__map-link {
+  display: block;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contact__map-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (max-width: 1050px) {
+  .contact__map-link {
+    max-width: 1440px;
+  }
+  .contact__map-img {
+    max-width: 1440px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .contact__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact__text {
+    margin-bottom: 36px;
+  }
+  .contact__form {
+    position: static;
+    z-index: 1;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 70px;
+    width: 375px;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .contact__form {
+    width: 100%;
+    border-radius: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
